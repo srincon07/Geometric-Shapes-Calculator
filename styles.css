@@ -81,3 +81,7 @@ button:hover
     color: rgb(102, 255, 0);
     font-size: 2rem;
 }
+#alert {
+    color: rgb(240, 71, 9);
+    font-size: 1.5rem;
+}

@@ -9,10 +9,12 @@ function squareArea(side){
 
 // Triangle code
 function validateTriangle(leg, base){
-    if (leg > 0 && base > 0)
+    if (leg > 0 && base > 0){
+        document.getElementById('alert').style.display = 'none';
         return true;
+    }        
 
-    alert('Enter positive numbers.');
+    document.getElementById('alert').textContent = 'Use positive values';
 }
 
 function trianglePerimeter(leg, base){
