@@ -68,7 +68,13 @@ function calculateTrianglePerimeter(){
     const legs = Number(document.getElementById('legs').value);
     const base = Number(document.getElementById('base').value);
 
-    const perimeter = trianglePerimeter(legs, base);
+    if (legs >=0 && base >=0) {
+        const perimeter = trianglePerimeter(legs, base);
+    }
+    else {
+        alert('Enter positive numbers.')
+    }
+
     document.getElementById('triangleResult').textContent = `Perimeter: ${perimeter}`;
 };
 
