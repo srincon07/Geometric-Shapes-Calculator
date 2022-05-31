@@ -8,6 +8,13 @@ function squareArea(side){
 };
 
 // Triangle code
+function validateTriangle(leg, base){
+    if (leg > 0 && base > 0)
+        return true;
+
+    alert('Enter positive numbers.');
+}
+
 function trianglePerimeter(leg, base){
     return (leg * 2) + base;
 };
@@ -67,31 +74,32 @@ function calculateSquareArea(){
 function calculateTrianglePerimeter(){
     const legs = Number(document.getElementById('legs').value);
     const base = Number(document.getElementById('base').value);
+    
+    if (validateTriangle(legs, base)){
+        const perimeter = trianglePerimeter(legs, base);    
+        document.getElementById('triangleResult').textContent = `Perimeter: ${perimeter}`;
+    };
 
-    if (legs >=0 && base >=0) {
-        const perimeter = trianglePerimeter(legs, base);
-    }
-    else {
-        alert('Enter positive numbers.')
-    }
-
-    document.getElementById('triangleResult').textContent = `Perimeter: ${perimeter}`;
 };
 
 function calculateTriangleHeight(){
     const legs = Number(document.getElementById('legs').value);
     const base = Number(document.getElementById('base').value);
 
-    const height = triangleHeight(legs, base);
-    document.getElementById('triangleResult').textContent = `Height: ${height}`;
+    if (validateTriangle(legs, base)){
+        const height = triangleHeight(legs, base);
+        document.getElementById('triangleResult').textContent = `Height: ${height}`;
+    };
 };
 
 function calculateTriangleArea(){
     const legs = Number(document.getElementById('legs').value);
     const base = Number(document.getElementById('base').value);
 
-    const area = triangleArea(legs, base);
-    document.getElementById('triangleResult').textContent = `Area: ${area}`;
+    if (validateTriangle(legs, base)){
+        const area = triangleArea(legs, base);
+        document.getElementById('triangleResult').textContent = `Area: ${area}`;
+    };
 };
 
 // Functions for Circle section
