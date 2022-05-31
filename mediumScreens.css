@@ -1,0 +1,29 @@
+header {
+    font-size: 1.6rem;
+}
+header > p, label {
+    font-size: 1.6rem;
+}
+input, button {
+    height: 3.5rem;
+}
+input {
+    margin: 1.5rem auto;
+}
+.container {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.figure-tile {
+    width: 30rem;
+    height: 30rem;
+}
+.square-section {
+    order: 1;
+}
+.circle-section {
+    order: 2;
+}
+.triangle-section {
+    order: 3;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometrics shapes | JavaScript Workshop Platzi</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./mediumScreens.css" media="screen and (min-width: 600px)" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0042d2cb72.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>GEOMETRIC FIGURES</h1>
+        <p>Welcome!! Here is the property calculator for geometric figures.</p>
+    </header>
+    <main class="container">
+        <section id="square" class="figure-tile square-section">
+            <h2>SQUARE</h2>
+            <form action="">
+                <label for="squareInput">Type the length of the square side</label>
+                <input id="squareInput" type="number" />
+                <p id="squareResult" class="result"></p>
+                <button id="square-perimeter" class="btn-square" type="button" onclick="calculateSquarePerimeter()">Perimeter</button>
+                <button id="square-area" class="btn-square" type="button" onclick="calculateSquareArea()">Area</button>
+            </form>
+        </section>
+        <section id="triangle" class="figure-tile triangle-section">
+            <h2>TRIANGLE</h2>
+            <form action="">
+                <label for="legs">Type the length for the legs</label>
+                <input id="legs" type="number" />
+                <label for="base">Type the length for the base</label>
+                <input id="base" type="number" />
+                <p id="triangleResult" class="result"></p>
+                <button id="triangle-perimeter" class="btn-triangle" type="button" onclick="calculateTrianglePerimeter()">Perimeter</button>
+                <button id="triangle-height" class="btn-triangle" type="button" onclick="calculateTriangleHeight()">Height</button>
+                <button id="triangle-area" class="btn-triangle" type="button" onclick="calculateTriangleArea()">Area</button>
+            </form>
+        </section>
+        <section id="circle" class="figure-tile circle-section">
+            <h2>CIRCLE</h2>
+            <form action="">
+                <label for="circleRadio">Type the circle's radio length</label>
+                <input id="circleRadio" type="number" />
+                <p id="circleResult" class="result"></p>
+                <button id="circle-perimeter" class="btn-circle" type="button" onclick="calculateCirclePerimeter()">Perimeter</button>
+                <button id="circle-diameter" class="btn-circle" type="button" onclick="calculateCircleDiameter()">Diameter</button>
+                <button id="circle-area" class="btn-circle" type="button" onclick="calculateCircleArea()">Area</button>
+            </form>
+        </section>
+    </main>
+    <script src="./figures.js"></script>
+</body>
+
+</html>

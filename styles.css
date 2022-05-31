@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(51, 58, 78);
+    color: white;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 3rem auto;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+header > h1 {
+    margin: 3rem auto;
+}
+header > p {
+    font-size: 1.5rem;
+}
+label {
+    font-size: 1.2rem;
+}
+input, button {
+    display: block;
+    width: 15rem;
+    height: 2rem;
+    margin: 0.4rem auto;
+}
+input {
+    background-color: rgb(196, 231, 247);
+    font-weight: bold;
+    padding: 0.3rem;
+}
+button {
+    outline: none;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    background-color: rgb(97, 29, 29);
+    width: 8rem;
+    display: inline;
+}
+button:hover
+{
+    background-color: rgb(189, 189, 189);
+    color: rgb(0, 0, 0);
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+    margin: 2rem 1rem;
+}
+.figure-tile {
+    width: 30rem;
+    min-width: 150px;
+    padding: 1.5rem 0.7rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: rgb(17, 7, 78);
+}
+.result {
+    color: rgb(102, 255, 0);
+    font-size: 2rem;
+}
