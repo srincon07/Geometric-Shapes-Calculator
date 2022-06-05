@@ -2,60 +2,116 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geometric shapes | JavaScript Workshop</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./mediumScreens.css" media="screen and (min-width: 600px)" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0042d2cb72.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometric and Statistical Calculator | JavaScript Workshop</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./mediumScreens.css" media="screen and (min-width: 600px)" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0042d2cb72.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <h1>GEOMETRIC SHAPES CALCULATOR</h1>
-        <p>Welcome!! Here is the property calculator for geometric shapes.</p>
-    </header>
-    <main class="container">
-        <section id="square" class="figure-tile square-section">
-            <h2>SQUARE</h2>
-            <form action="">
-                <label for="squareInput">Type the length of the square side</label>
-                <input id="squareInput" type="number" />
-                <p id="squareResult" class="result"></p>
-                <button id="square-perimeter" class="btn-square" type="button" onclick="calculateSquarePerimeter()">Perimeter</button>
-                <button id="square-area" class="btn-square" type="button" onclick="calculateSquareArea()">Area</button>
-            </form>
-        </section>
-        <section id="triangle" class="figure-tile triangle-section">
-            <h2>TRIANGLE</h2>
-            <form action="">
-                <label for="legs">Type the length for the legs</label>
-                <input id="legs" type="number" />
-                <label for="base">Type the length for the base</label>
-                <input id="base" type="number" />
-                <p id="triangleResult" class="result"></p>
-                <button id="triangle-perimeter" class="btn-triangle" type="button" onclick="calculateTrianglePerimeter()">Perimeter</button>
-                <button id="triangle-height" class="btn-triangle" type="button" onclick="calculateTriangleHeight()">Height</button>
-                <button id="triangle-area" class="btn-triangle" type="button" onclick="calculateTriangleArea()">Area</button>
-                <p id="alert"></p>
-            </form>
-        </section>
-        <section id="circle" class="figure-tile circle-section">
-            <h2>CIRCLE</h2>
-            <form action="">
-                <label for="circleRadio">Type the circle's radio length</label>
-                <input id="circleRadio" type="number" />
-                <p id="circleResult" class="result"></p>
-                <button id="circle-perimeter" class="btn-circle" type="button" onclick="calculateCirclePerimeter()">Perimeter</button>
-                <button id="circle-diameter" class="btn-circle" type="button" onclick="calculateCircleDiameter()">Diameter</button>
-                <button id="circle-area" class="btn-circle" type="button" onclick="calculateCircleArea()">Area</button>
-            </form>
-        </section>
-    </main>
-    <script src="./figures.js"></script>
+  <header>
+    <h1>GEOMETRIC AND STATISTICAL CALCULATOR</h1>
+    <p>Welcome!! Here you can calculate geometric and statistical measurement</p>
+  </header>
+
+  <main class="container">
+    <!-- SQUARE SECTION -->
+    <section id="square" class="figure-tile square-section">
+      <h2>Square</h2>
+      <form action="">
+        <label for="squareInput">Type the length of the square side</label>
+        <input id="squareInput" type="number" />
+        <p id="squareResult" class="result"></p>
+        <button id="square-perimeter" class="btn-square" type="button"
+          onclick="calculateSquarePerimeter()">Perimeter</button>
+        <button id="square-area" class="btn-square" type="button" onclick="calculateSquareArea()">Area</button>
+      </form>
+    </section>
+
+    <!-- TRIANGLE SECTION -->
+    <section id="triangle" class="figure-tile triangle-section">
+      <h2>Triangle</h2>
+      <form action="">
+        <label for="legs">Type the length for the legs</label>
+        <input id="legs" type="number" />
+        <label for="base">Type the length for the base</label>
+        <input id="base" type="number" />
+        <p id="triangleResult" class="result"></p>
+        <button id="triangle-perimeter" class="btn-triangle" type="button"
+          onclick="calculateTrianglePerimeter()">Perimeter</button>
+        <button id="triangle-height" class="btn-triangle" type="button"
+          onclick="calculateTriangleHeight()">Height</button>
+        <button id="triangle-area" class="btn-triangle" type="button" onclick="calculateTriangleArea()">Area</button>
+        <p id="alert"></p>
+      </form>
+    </section>
+
+    <!-- CIRCLE SECTION -->
+    <section id="circle" class="figure-tile circle-section">
+      <h2>Circle</h2>
+      <form action="">
+        <label for="circleRadio">Type the circle's radio length</label>
+        <input id="circleRadio" type="number" />
+        <p id="circleResult" class="result"></p>
+        <button id="circle-perimeter" class="btn-circle" type="button"
+          onclick="calculateCirclePerimeter()">Perimeter</button>
+        <button id="circle-diameter" class="btn-circle" type="button"
+          onclick="calculateCircleDiameter()">Diameter</button>
+        <button id="circle-area" class="btn-circle" type="button" onclick="calculateCircleArea()">Area</button>
+      </form>
+    </section>
+
+    <!-- ARITMETIC MEAN SECTION -->
+    <section id="mean-section" class="figure-tile">
+      <h2>Calculate Aritmetic Mean</h2>
+      <form action="">
+        <label for="meanNumbersSet">Type your data separated by spaces.</label>
+        <textarea id="meanNumbersSet" cols="30" rows="5"></textarea>
+        <p id="meanResult" class="result"></p>
+        <button id="mean-calculator" class="btn-mean" type="button" onclick="calculateListMean()">Calculate</button>
+      </form>
+    </section>
+
+    <!-- MEDIAN SECTION -->
+    <section id="median-section" class="figure-tile">
+      <h2>Calculate Median</h2>
+      <form action="">
+        <label for="medianNumbersSet">Type your data separated by spaces.</label>
+        <textarea id="medianNumbersSet" cols="30" rows="5"></textarea>
+        <p id="medianResult" class="result"></p>
+        <button id="median-calculator" class="btn-median" type="button" onclick="calculateMedian()">Calculate</button>
+      </form>
+    </section>
+
+    <!-- MODE SECTION -->
+    <section id="mode-section" class="figure-tile">
+      <h2>Calculate Mode</h2>
+      <form action="">
+        <label for="modeDataSet">Type your data separated by spaces.</label>
+        <textarea id="modeDataSet" cols="40" rows="5"></textarea>
+        <p id="modeResult" class="result"></p>
+        <button id="mode-calculator" class="btn-mode" type="button" onclick="calculateListMode()">Calculate</button>
+      </form>
+    </section>
+
+    <!-- HARMONIC MEAN SECTION -->
+    <section id="harmonic-section" class="figure-tile">
+      <h2>Calculate Harmonic Mean</h2>
+      <form action="">
+        <label for="harmonicNumbersSet">Type your data separated by spaces.</label>
+        <textarea id="harmonicNumbersSet" cols="30" rows="5"></textarea>
+        <p id="harmonicResult" class="result"></p>
+        <button id="harmonic-calculator" class="btn-harmonic" type="button"
+          onclick="calculateHarmonicMean()">Calculate</button>
+      </form>
+    </section>
+  </main>
+  <script src="./calculator.js"></script>
 </body>
 
 </html>

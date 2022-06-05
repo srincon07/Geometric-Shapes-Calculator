@@ -27,3 +27,12 @@ input {
 .triangle-section {
     order: 3;
 }
+#median-section {
+    order: 5;
+}
+#mode-section {
+    order: 6;
+}
+#harmonic-section {
+    order: 7;
+}

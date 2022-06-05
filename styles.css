@@ -30,16 +30,19 @@ header > p {
 label {
     font-size: 1.2rem;
 }
-input, button {
+input, button, textarea {
     display: block;
     width: 15rem;
     height: 2rem;
     margin: 0.4rem auto;
 }
-input {
+input, textarea {
     background-color: rgb(196, 231, 247);
     font-weight: bold;
     padding: 0.3rem;
+}
+textarea {
+    height: 6rem;
 }
 button {
     outline: none;
@@ -76,6 +79,27 @@ button:hover
     border: 1px solid #444;
     border-radius: 5px;
     background-color: rgb(17, 7, 78);
+}
+#square {
+    order: 1;
+}
+#triangle {
+    order: 2;
+}
+#circle {
+    order: 3;
+}
+#mean-section {
+    order: 4;
+}
+#median-section {
+    order: 5;
+}
+#mode-section {
+    order: 6;
+}
+#harmonic-section {
+    order: 7;
 }
 .result {
     color: rgb(102, 255, 0);
